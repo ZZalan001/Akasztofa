@@ -54,7 +54,7 @@ namespace Akasztofa
             }
             if (Vege())
             {
-                MessageBox.Show("Gratulálok, kitaláltad a szót! " + szo);
+                MessageBox.Show("Gratulálok, kitaláltad a szót! " + szo); 
             }
         }
 
