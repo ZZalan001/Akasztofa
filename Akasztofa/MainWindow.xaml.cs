@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Akasztofa.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,13 @@ namespace Akasztofa
     /// </summary>
     public partial class MainWindow : Window
     {
-        static string szo = "alma";
+        static string szo = "";
         public MainWindow()
         {
             InitializeComponent();
+            List<string> list = new SzoController().SzoListFromFile();
+            Random rnd = new Random();
+            szo = list[rnd.Next(list.Count)];
         }
 
         private void JatekterInit(object sender, RoutedEventArgs e)
@@ -54,7 +58,8 @@ namespace Akasztofa
             }
             if (Vege())
             {
-                MessageBox.Show("Gratulálok, kitaláltad a szót! " + szo); 
+                MessageBox.Show("Gratulálok, kitaláltad a szót! " + szo);
+                MnStart.Header = "Új játék";
             }
         }
 
