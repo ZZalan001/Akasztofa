@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controllers\SzoController.cs" />
     <Compile Include="FeladvanyButton.cs" />
     <Compile Include="IViselkedes.cs" />
     <Compile Include="MainWindow.xaml.cs">
